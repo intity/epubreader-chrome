@@ -10,7 +10,7 @@ module.exports = {
         new CopyPlugin({
             patterns: [
                 {
-                    from: 'node_modules/epubjs-reader/reader',
+                    from: 'node_modules/epubjs-reader/dist',
                     to: './',
                     toType: 'dir',
                     force: true
