@@ -1,8 +1,16 @@
-chrome.webRequest.onBeforeRequest.addListener(function (data) {
-	return { "redirectUrl": chrome.runtime.getURL("index.html") + "?bookPath=" + data.url };
-},
-{
-	"urls": ["*://*/*.epub", "*://*/*.EPUB"],
-	"types": ["main_frame"]
-},
-["blocking"]);
+chrome.runtime.onInstalled.addListener(() => {
+    chrome.contextMenus.create({
+        id: "open-reader",
+        title: "Open Reader",
+        type: "normal",
+        contexts: ["action"]
+    })
+})
+
+chrome.contextMenus.onClicked.addListener((info, tab) => {
+    if (info.menuItemId === "open-reader") {
+        chrome.tabs.create({
+            url: chrome.runtime.getURL("index.html")
+        })
+    }
+})

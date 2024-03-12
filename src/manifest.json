@@ -1,40 +1,40 @@
 {
 	"name": "Epub Reader",
 	"version": "0.1",
-	"description": "The epub reader extension from Future Press",
+	"description": "Epub reader chrome extension",
 	"permissions": [
 		"tabs",
 		"storage",
 		"downloads",
 		"contextMenus",
+		"declarativeNetRequest",
 		"webNavigation",
-		"webRequest",
-		"webRequestBlocking",
-		"<all_urls>"
+		"webRequest"
 	],
+	"host_permissions": ["*://*/*"],
 	"background": {
-		"scripts": [
-			"js/background.js",
-			"js/menu.js"
-		]
+		"service_worker": "js/background.js",
+		"type": "module"
 	},
-	"homepage_url": "http://futurepress.org",
+	"homepage_url": "https://github.com/intity/epubreader-chrome",
 	"options_page": "options.html",
 	"icons": {
 		"16": "img/icon_16.png",
 		"32": "img/icon_32.png",
 		"48": "img/icon_48.png"
 	},
-	"manifest_version": 2,
+	"manifest_version": 3,
 	"web_accessible_resources": [
-		"css/*.css",
-		"font/fontello.eot",
-		"font/fontello.svg",
-		"font/fontello.ttf",
-		"font/fontello.woff",
-		"img/*.png",
-		"img/*.gif",
-		"js/*.js",
-		"index.html"
+		{
+			"resources": [
+				"css/*.css",
+				"font/*",
+				"img/*.gif",
+				"img/*.png",
+				"js/*.js",
+				"index.html"
+			],
+			"matches": ["*://*/*"]
+		}
 	]
 }
