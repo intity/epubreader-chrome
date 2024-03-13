@@ -1,7 +1,7 @@
 {
   "name": "epubreader-chrome",
   "version": "1.0.0",
-  "description": "The epub reader extension from Future Press",
+  "description": "Epub reader chrome extension",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode=production --progress"
@@ -10,12 +10,12 @@
     "type": "git",
     "url": "git+https://github.com/intity/epubreader-chrome.git"
   },
-  "author": "futurepress",
+  "author": "intity",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/intity/epubreader-chrome/issues"
   },
-  "homepage": "https://github.com/intity/epubreader-chrome#readme",
+  "homepage": "https://github.com/intity/epubreader-chrome",
   "dependencies": {
     "epubjs-reader": "git+https://github.com/intity/epubjs-reader.git"
   },
