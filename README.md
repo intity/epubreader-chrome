@@ -16,4 +16,4 @@ To build this extension, run the command:
 
 ## Install this extension
 
-To install this extension for your browser, you need to include the `manifest.json` file in the `chrome://extensions` tab (see [Getting started](https://developer.chrome.com/docs/extensions/mv2/getstarted/)). The root directory of this extension is `dist`.
+To install this extension for your browser, you need to include the `manifest.json` file in the `chrome://extensions` tab (see [Load an unpacked extension](https://developer.chrome.com/docs/extensions/get-started/tutorial/hello-world#load-unpacked)). The root directory of this extension is `dist`.
